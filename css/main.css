@@ -1,0 +1,1249 @@
+/*
+    *****************************************
+    - Fonts
+    - General CSS
+    - Header
+    - Main
+    - Home/Portfolio
+    - Inner page
+    - Project gallery page
+    - About me page
+    - Tooltip
+    - Responsive code
+*/
+
+/*~~~~~~  Fonts  ~~~~~~*/
+@font-face {
+  font-family: 'lato-light';
+  src: url('../fonts/Lato-Light.woff2') format('woff2'),
+       url('../fonts/Lato-Light.woff') format('woff'),
+       url('../fonts/Lato-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+       url('../fonts/Lato-Regular.woff') format('woff'),
+       url('../fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+       url('../fonts/Lato-Bold.woff') format('woff'),
+       url('../fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nunitosans-light';
+  src: url('../fonts/NunitoSans-Light.woff2') format('woff2'),
+       url('../fonts/NunitoSans-Light.woff') format('woff'),
+       url('../fonts/NunitoSans-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nunitosans-regular';
+  src: url('../fonts/NunitoSans-Regular.woff2') format('woff2'),
+       url('../fonts/NunitoSans-Regular.woff') format('woff'),
+       url('../fonts/NunitoSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nunitosans-semibold';
+  src: url('../fonts/NunitoSans-SemiBold.woff2') format('woff2'),
+       url('../fonts/NunitoSans-SemiBold.woff') format('woff'),
+       url('../fonts/NunitoSans-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*~~~~~~  General CSS  ~~~~~~*/
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background: #fff;
+}
+.wrapper{
+    width: 92.72727272727273%;
+    margin: 0 auto;
+}
+header ul.social li a,
+.main .work a .caption,
+header nav ul li a{
+    transition:all .1s linear;
+    -webkit-transition:all .1s linear;
+    -moz-transition:all .1s linear;
+    -o-transition:all .1s linear;
+}
+h1, h2, h3, h4, h5 ,h6{
+    color: #4b4848;
+    font-family: "lato-regular", arial;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.50em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/*~~~~~~  Header  ~~~~~~*/
+
+@media (min-width:1099px){
+    header{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        min-height: 100%;
+        padding: 0 0 0 50px;
+        background: #ffffff;
+        opacity: 100%;
+        float: left;
+        overflow: hidden;
+        z-index: 9999;
+    }
+
+    header .logo{
+        margin-top: 60px; /* from 100px */
+        margin-left: 10%;
+    }
+
+    header nav ul{
+        display: block;
+        overflow: hidden;
+        margin-top: 60px; /* from 100px */
+        margin-left: 10%;
+        list-style: none;
+    }
+
+    header nav ul li{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    header nav ul li a{
+        color: #454545;
+        font-family: "lato-regular", arial;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    header nav ul li a:hover,
+    header nav ul li a.selected{ 
+        color: #969595;
+    }
+
+    header .footer{
+        display: block;
+        position: absolute;
+        bottom: 40px;
+    }
+
+    header ul.social{
+        list-style: none;
+        margin-bottom: 5px;
+        margin-left: 10%;
+        margin-right: 15%;
+    }
+
+    header ul.social li{
+        display: block;
+        float: left;
+        position: relative;
+        margin: 0 15px 15px 0;
+    }
+
+    header ul.social li a{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url('../img/sm.png') no-repeat;
+        background-position: 0 0;
+    }
+
+    header ul.social li a:hover{
+        background: url('../img/sm_hover.png') no-repeat;
+    }
+
+    header ul.social li a.linkedin,
+    header ul.social li a.linkedin:hover{
+        background-position: -155px 0;
+    }
+
+    header ul.social li a.facebook,
+    header ul.social li a.facebook:hover{
+        background-position: 0px 0;
+    }
+
+    header ul.social li a.twitter,
+    header ul.social li a.twitter:hover{
+        background-position: -93px 0;
+    }
+
+    header ul.social li a.dribbble,
+    header ul.social li a.dribbble:hover{
+        background-position: -124px 0;
+    }
+
+    header ul.social li a.behance,
+    header ul.social li a.behance:hover{
+        background-position: -62px 0;
+    }
+
+    header ul.social li a.github,
+    header ul.social li a.github:hover{
+        background-position: -186px 0;
+    } /* End of Social Media Links */
+
+    header .rights p{
+        color: #454545;
+        font-family: "nunitosans-regular", arial;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 15%;
+    }
+
+    header .rights a{
+        font-family: "nunitosans-semibold", arial;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    header .rights a:hover{
+        color:#969595;
+    }
+    
+    #menu_icon,
+    .close_menu{
+          display: none;
+    }
+
+}
+
+    #menu_icon,
+    .close_menu{
+        float: right;
+        margin-right: 40px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background: url('../img/men_icons.png') no-repeat;
+    }
+
+    #menu_icon{
+        background-position: 0 0;
+    }
+
+    .close_menu{
+        background-position: -41px 0!important;
+    }
+
+/*~~~~~~ Main ~~~~~~*/
+
+.main{ /*Main display grid for the right side of website */
+    width: 100%;
+    height: 100%;
+    padding-left: 300px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 55;
+    background: #f6f6f6;
+    clear: both;
+    min-height: 100vh;
+}
+
+/*~~~~~~ Home/Portfolio ~~~~~~*/
+
+.main .work{ /* Square layout for different projects */
+    display: block;
+    width: 33.33333333333333%;
+    height: auto;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .work .media{ /* fitting screenshot of work to grid */
+    width: 100%;
+    vertical-align: middle;
+}
+
+.main .work .caption{ /* Interior cell wrapper */
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    opacity: 0;
+}
+
+.main .work a:hover .caption{ /* opacity shift on hover */
+    opacity: 1;
+}
+
+.work .caption .work_title{ /*Interior text display */
+    display: block;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -40px;
+    border-bottom: 1px solid #bfbbbb;
+    border-top: 1px solid #bfbbbb;
+    padding-bottom: 15px;
+}
+
+.main .work .caption h1{ /* Project Titles 1.17rem*/
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    padding: 10px 0 0;
+    z-index: 77;
+    color: #454545;
+    font-family: "lato-regular", arial;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: .5px;
+}
+
+.work-para{ /* Project Skills/Mediums .875rem */
+  color: #969595;
+  font-family: "nunitosans-semibold", arial;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/*~~~~~~ Inner Page ~~~~~~*/
+
+.top{ /* Top Bar for page header */
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    background: url('../img/header.webp') no-repeat; /* Header for pages */
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.top_archive{
+  background: url('../img/header_archives.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_blossombloom{
+  background: url('../img/header_blossombloom.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_greek{
+  background: url('../img/header_greek.webp') no-repeat;
+  background-size: cover;
+}
+
+.top_nepali{
+  background: url('../img/header_nepali.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_zelda{
+  background: url('../img/header_zelda.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_landmark{
+  background: url('../img/header_landmark.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_daves{
+  background: url('../img/header_daves.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_byol{
+  background: url('../img/header_byol.webp') no-repeat;
+  background-size: cover;
+}
+
+.top_shelterseeker{
+  background: url('../img/header_shelterseeker.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.top_dolliekisses{
+  background: url('../img/header_dolliekisses.webp') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* End of page headers */
+
+.work_nav{ /* Navigation Bar for gallery items */
+    display: block;
+    width: 100%;
+}
+
+.work_nav .btn{
+    float: right;
+}
+
+.work_nav ul{
+    list-style: none;
+}
+
+.work_nav ul li{
+    display: block;
+    float: left;
+    margin: 0 0 1px 1px;
+    position: relative;
+}
+
+.work_nav a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('../img/p_navigation.png') no-repeat;
+    background-position: 0 0;
+}
+
+.work_nav a.previous{
+    background-position: 0 0;
+}
+
+.work_nav a.previous.disabled{ /* a disable point if you're at beginning of gallery */
+    cursor: no-drop;
+}
+
+.work_nav a.grid{
+    background-position: -41px 0;
+}
+
+.work_nav a.next{
+    background-position: -82px 0;
+}
+
+.work_nav a.next.disabled{ /* a disable point if you're at end of gallery */
+    cursor: no-drop;
+} /* End of Nav Bar */
+
+.top .title{  /* Page Title Style */
+    display: block;
+    width: 100%;color: #4b4848;
+    font-family: "lato-bold", arial;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, .7);
+    padding: 20px;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin: 0!important;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.content_header{ /* Header that contains title and navigation */
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -46.36363636363637%;
+}
+
+.content{ /* Main Table for content of page padding: 25px 60px 30px 20px;*/
+    color: #4b4848;
+    font-family: "nunitosans-regular", arial;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 25px 40px 30px 40px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.content p{ /* Content Paragraph Style*/
+    color: #2e2c2c;
+    font-family: "nunitosans-regular", arial;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px; /* 35 */
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6{
+    color: #4b4848;
+    font-family: "lato-regular", arial;
+    font-weight:400;
+    line-height: 26px; /* 28 */
+    margin-bottom: 24px;
+
+} /* H styles on content pages */
+
+.content img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.content ol, .content ul{
+    margin-left: 20px;
+}
+
+.content ul.archive-list{ /* Archive list margin and style*/
+    margin: 20px 0 20px 45px;
+    list-style-type: none;
+}
+
+.content ul.archive-list li {
+    margin: 20px 0;
+}
+
+.content ul.archive-list li a, .content ul.archive-list li a:active, .content ul.archive-list li a:visited{
+    text-decoration: none;
+    color: #454545;
+}
+
+.content ul.archive-list li a:hover{ /*List link hover shift */
+    color: #969595;
+}
+
+.work img{
+  aspect-ratio: auto 466 / 466;
+}
+
+#head-para p,/* Custom ID tag for about page */
+#head-para h3{
+  margin-bottom: 0;
+}
+
+#design-header-one{ /* Custom ID found on project pages */
+  margin-bottom: 1px;
+  text-decoration: underline;
+}
+#design-header-two{ /* Custom ID found on project pages */
+  margin-bottom: 1px;
+  text-decoration: underline;
+}
+#design-header-three{ /* Custom ID found on project pages */
+  margin-bottom: 1px;
+  text-decoration: underline;
+}
+#design-header-four{ /* Custom ID found on project pages */
+  margin-bottom: 1px;
+  text-decoration: underline;
+}
+#design-header-five{ /* Custom ID found on project pages */
+  margin-bottom: 1px;
+  text-decoration: underline;
+}
+
+/*~~~~~~ PROJECT GALLERY PAGE ~~~~~~*/
+
+/* project info table styles */
+.row-project{ 
+  display: flex; 
+  padding-top: 20px;
+}
+.column-project-1{
+  flex: 25%;
+  margin-left: 20px;
+  margin-right: auto;
+  padding-right: 20px;
+}
+.column-project-2{
+  flex: 75%;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.project-desc-style{
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: .83em 0;
+}
+.project-list-style{ 
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+a.bold-link{ /* Figma Link, in Project Info */
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2838c9;
+}
+a.bold-link:hover{
+  color: #df8d12;
+}
+hr.hidden{ /*Hidden hr for mobile */
+  display: none;
+}
+/* END project info table styles */
+
+/* image styles */
+.main-image{ /* Main Project Overview Images */
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.following-image{ /* Medium Size Project Image*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  width: 70%;
+}
+.smaller-stacked-img{ /* smaller images */
+  width: 50%;
+  margin: 20px;
+  border-radius: 30px;
+}
+.iphone-gallery{ /*table for triptych display */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.iphone{
+  width: 30%;
+} 
+/* END of image styles */
+
+.scroll-button{ /* Animated Scroll Icon */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 64px;
+}
+
+/* Main workflow tables and styles */
+.work-flow-table{  /* main table */
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 10px 20px 20px 20px;
+}
+.workflow-title{ /* headers in workflow table */
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: .83em 0;
+  margin-right: 20px;
+}
+.workflow-list{ /*lists in workflow table*/
+  font-size: 1.08rem;
+  border-collapse: collapse;
+  border-style: hidden;
+  margin-left: 20px;
+}
+.workflow-list tr{
+  border: none;
+}
+.workflow-list td{  
+  padding-right: 20px;
+  border-right: solid 1px black;
+}
+.workflow-col-2{ /* Workflow Column 2 Padding */
+  padding-left: 20px;
+}
+.blank-row{ 
+  height: 10px;
+  background-color: #fff;
+}
+/* END of workflow table styling */
+
+/* Paragraph styles in workflow */
+.para1{ 
+  margin: 30px 20px 0px 20px;
+}
+.para2{
+  margin: 0px 20px 0px 20px;
+}
+.content .para3{
+  line-height: 1;
+}
+.para-list{
+  font-size: 16px;
+  margin: 0px 20px 0px 20px;
+}
+.content .para-subheader{
+  margin: 0px 20px 6px 20px
+}
+.spacer{  /* Extra Padding  */
+  padding: 10px;
+}
+.bottom-margin{ /* Extra Margin */
+  margin-bottom: 20px;
+}
+.no-bottom-margin{
+  margin-bottom: 0;
+}
+.content .sm-bottom-margin{
+  margin-bottom: 12px;
+}
+.lefttab{
+  margin-left: 20px;
+}
+.leftdoubletab{
+  margin-left: 40px;
+}
+.listpad{
+  margin-bottom: 10px;
+}
+.bold-word{ /* Some bold Styes for paragraphs */
+  font-weight: bold;
+}
+.bold-blue{
+  font-weight: bold;
+  color: #495fdb;
+}
+.bold-pink{
+  font-weight: bold;
+  color: #d92886;
+}
+.bold-purple{
+  font-weight: bold;
+  color: #9a4ccb;
+}
+/* END Paragraph styles in workflow */
+
+.back-up{ /* Simple Back Up link */
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 20%;
+  background-color: #383838;
+  padding: .5rem;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+.back-up:hover{
+  opacity: 60%;
+}
+.btn-hide{
+  display: none;
+}
+.back-up-icon{
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+/* END simple back up link */
+.progress-bar{
+  height: 1rem;
+  background: linear-gradient(to right, #636363, #383838);
+  opacity: 90%;
+  width: 0;
+  transition: width 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sizetest{
+  background: #9a4ccb;
+  height: 200px;
+  width: 1410px;
+}
+
+
+/*~~~~~~ About Me Page ~~~~~~*/
+
+.about-me{ /* Layout for About paragraph */
+  width: 80%;
+  margin-bottom: 60px;
+}
+.content .portrait{ /* portrait style */
+  display: block;
+  width: 20%;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.portrait:hover{ /* portrait hover zoom */
+  transform: scale(1.1);
+}
+
+/* Skill Section */
+.skill-section-container{ /* Layout for skills */
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 60px 0;
+
+  justify-content: center;
+  gap: 20px;
+}
+.skill-container{ /* skill box */
+  display: block;
+  position: relative;
+  height: auto;
+  width: 25%;
+}
+.skill-icon{ /* skill image */
+  width: 70%;
+}
+.skill-icon:hover{ /* skill image hover zoom */
+  transform: scale(1.1);
+}
+.content .skill-desc{
+  color: #47683e;
+  padding: 10px 10px 10px 10px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+/* Contact Formatting */
+.contact-me{ /*padding and margin for availability/contact text */
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+.contact-list{ /*lists in workflow table*/
+  font-size: 1.08rem;
+  border-collapse: collapse;
+  border-style: hidden;
+  margin-top: 0px;
+}
+.contact-list tr{
+  border: none;
+}
+.contact-list td{  
+  padding-right: 0px;
+}
+.contact-available{ /*minor margin for availability text */
+  margin-top: 8px;
+}
+.checkmark{ /* for Availablity checkmarks */
+  color: #47683e;
+  padding-right: 10px;
+}
+.contact-underline{ /* for bold underline text */
+  text-decoration: underline;
+  font-weight: bolder;
+  color: #47683e;
+}
+.arrow-contact{ /* framing the contact me */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.arrow-contact a:hover{ /* hover change color  */
+  color: #47683e;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.arrow-bold{ /* for styling arrow symbol */
+  color: #47683e;
+  font-size: 18px;
+  font-weight: bolder;
+  padding-right: 8px;
+}
+
+/* ~~~~~~ Image Gallery Flex Grid ~~~~~~*/
+.archive-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-left: 46px;
+}
+.archive-gallery-item{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 0 calc(25% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px darkgrey;
+  text-decoration: none;
+}
+.archive-gallery-item img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.archive-gallery-item:hover{
+  transform: scale(1.1);
+}
+.archive-text-container{
+  background-color: #fff;
+  padding: 20px 10px 0px 10px;
+  text-align: center;
+  font-weight: bold;
+}
+  
+
+/* Archive Gallery Flex */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 46px;
+}
+.gallery-item {
+  display: block;
+  position: relative;
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px darkgrey;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* Archive Images */
+.image-container {
+  width: 100%;
+  height: auto;
+  max-width: 1200px; /* You can adjust this value to fit your needs */
+  margin: 20px auto;
+  position: relative;
+  box-shadow: 5px 5px 5px DARKGREY;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ~~~~~~ Tooltip ~~~~~~*/
+
+.tooltip{
+    display: block;
+    padding: 7px 10px;
+    background: #454545;
+    color: #fff;
+    font-family: "lato-regular", "nunitosans-regular", arial;
+    font-size: 12px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 999;
+    opacity: 0;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+.tooltip:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 3px 0 3px;
+    border-color: #454545 transparent transparent transparent;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/*  Responsive code */
+@media (max-width:1099px){
+  /* General CSS - Swapping to Vertical */
+  header{
+      display: block;
+      width: 100%;
+      min-height: 100px;
+      padding: 0;
+      position: relative;
+  }
+  header .logo{
+      width: 50%;
+      margin: 20px 0 0 50px;
+      float: left;
+  }
+  header .footer{
+      display: none;
+  }
+  header #menu_icon,
+  header .close_menu{
+      float: right;
+      margin: 30px 30px 0 0;
+  }
+  header nav{
+      width: 100%;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      z-index: 9999;
+  }
+  header nav ul{
+      list-style: none;
+      display: none;
+      position: relative;
+  }
+  header nav ul li a{
+      display: block;
+      width: 100%;
+      padding: 30px 0;
+      text-align: center;
+      color: #454545;
+      font-family: "lato-regular", "nunitosans-regular", arial;
+      font-size: 16px;
+      text-decoration: none;
+      border-top: 1px solid #f7f5f5;
+      background: #fff;
+  }
+  header nav ul li a:active{
+      background: #f7f5f5;
+  }
+
+  /* Header - Swapping to Vertical */
+  #menu_icon,
+  .close_menu,
+  .show_menu{
+    display: block;
+  }
+  .show_menu{
+    display: block;
+  }
+  .main .work{
+    width: 50%;
+  }
+
+  /*~~~~~~ Main ~~~~~~*/
+  .main{
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+  }
+
+  /*~~~~~~ Inner Page ~~~~~~*/
+  .top{
+    background-position: 60% 40%;
+  }
+
+  /*~~~~~~ PROJECT GALLERY PAGE ~~~~~~*/
+  .row-project{ 
+    padding-top: 10px;
+  }
+  .column-project-1{
+    margin-left: 0px;
+  }
+  .column-project-2{
+    margin-right: 0px;
+  }
+    
+  /* image styles */
+  .main-image{ /* Main Project Overview Images */
+    border-radius: 10px;
+  }
+  .following-image{ /* Medium Size Project Image*/
+    border-radius: 10px;
+  }
+  .smaller-stacked-img{
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  /* Main workflow tables and styles */
+  .work-flow-table{  /* main table */
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+  }
+  .workflow-title{ /*headers in table */
+    margin-right: 0px;
+  }
+  .workflow-list{ /*lists in workflow table*/
+    margin-left: 0px;
+  }
+  /* END of workflow table styling */
+
+  /* Paragraph styles in workflow */
+  .para1{
+    margin: 20px 0px 0px 0px;
+  }
+  .para2{
+    margin: 0px;
+  }
+  .para-list{
+    margin: 0px;
+  }
+  .content .para-subheader{
+    margin: 0px 0px 6px 0px
+  }
+  .lefttab{
+    margin-left: 0px;
+  }
+  .leftdoubletab{
+    margin-left: 20px;
+  }
+  /* END Paragraph styles in workflow */
+
+  .progress-bar{
+    left: 0;
+  }
+
+  /*~~~~~~ About Me Page ~~~~~~*/
+  .skill-icon{ /* skill image */
+    width: 80%;
+  }
+
+  /*~~~~~~ Image Gallery Flex Grid  ~~~~~~*/
+  .gallery-item{
+      flex: 0 0 calc(50% - 20px);
+  }
+
+} /*  End of media less than 1099px*/
+
+@media (max-width:600px){ /* 600px covers most phones */
+  /*~~~~~~  General CSS  ~~~~~~*/
+  .content{ /* main content for mobile */
+    padding: 25px 10px 30px 10px;
+  }
+
+  /*~~~~~~ Home/Portfolio ~~~~~~*/
+  .main .work{
+        width: 100%;
+  }
+
+  /*~~~~~~ Inner Page ~~~~~~*/
+  .top{
+      background-position: 75% 25%;
+  }
+
+  /*~~~~~~ Project gallery page ~~~~~~*/
+
+  /* project info table styles */
+  .row-project { /* Decrease Padding Slightly on lower resolution */
+    display: block;
+    padding-top: 10px;
+  }
+  .column-project-1{
+    flex: 100%;
+    margin: auto;
+    padding-right: 0px;
+  }
+  .column-project-2{
+    flex: 100%;
+    margin: auto;
+  }
+  .figma-link-table{ /* Extra padding only needed on mobile */
+    margin-bottom: 20px;
+  }
+  hr.hidden{
+    display: block;
+  }
+
+  /* image styles */
+  .smaller-stacked-img{
+    width: 80%;
+    border-radius: 10px;
+  }
+  /* END of image styles */
+
+  /* Main workflow tables and styles */
+  .work-flow-table{  /* main table */
+    padding: 10px 0px 20px 0px;
+  }
+  .workflow-title{ /*headers in table */
+    margin-right: 0px;
+  }
+  /* END of workflow table styling */
+
+  /* Paragraph styles in workflow */
+  .para1{
+    margin: 30px 0px 0px 0px;
+  }
+  .para2{
+    margin: 0px;
+  }
+  .para-list{
+    margin: 0px;
+  }
+  .content .para-subheader{
+    margin: 0px 0px 6px 0px
+  }
+  .leftdoubletab{
+    margin-left: 10px;
+  }
+  /* END Paragraph styles in workflow */
+
+ /*~~~~~~ About Me Page ~~~~~~*/
+ .about-me{ /* Layout for About paragraph */
+  width: 100%;
+  margin-bottom: 60px;
+}
+  .content .portrait{ /* portrait style */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+    float: none;
+    width: 60%;
+  }
+  .skill-container{ /* skill box */
+    display: block;
+    position: relative;
+    height: auto;
+    width: 50%;
+  }
+  .skill-icon{ /* skill image */
+    width: 90%;
+  }
+
+  /* ~~~~~~ Image Gallery Flex Grid ~~~~~~*/
+  .gallery-item {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+} /*  End of media less than 600px*/
