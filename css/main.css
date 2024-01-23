@@ -61,30 +61,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'raleway-regular';
-  src: url('../fonts/Raleway.woff2') format('woff2'),
-       url('../fonts/raleway-regular.woff') format('woff'),
-       url('../fonts/raleway-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
-@font-face {
-  font-family: 'raleway-semibold';
-    src: url('../fonts/Raleway-SemiBold.woff2') format('woff2'),
-         url('../fonts/raleway-semibold.woff') format('woff'),
-         url('../fonts/raleway-semibold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'raleway-bold';
-    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
-         url('../fonts/raleway-bold.woff') format('woff'),
-         url('../fonts/raleway-bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
   
 /*~~~~~~  General CSS  ~~~~~~*/
 html{
@@ -978,7 +954,7 @@ hr.hidden{ /*Hidden hr for mobile */
 .image-container {
   width: 100%;
   height: auto;
-  max-width: 1200px; /* You can adjust this value to fit your needs */
+  max-width: 1200px;
   margin: 20px auto;
   position: relative;
   box-shadow: 5px 5px 5px DARKGREY;
@@ -1163,6 +1139,13 @@ hr.hidden{ /*Hidden hr for mobile */
     width: 80%;
   }
 
+  .archive-gallery{
+    gap: 40px; 
+  }
+  .archive-gallery-item{
+    flex: 0 0 calc(50% - 40px);
+    margin-bottom: 0px;
+  }
   /*~~~~~~ Image Gallery Flex Grid  ~~~~~~*/
   .gallery-item{
       flex: 0 0 calc(50% - 20px);
@@ -1264,6 +1247,14 @@ hr.hidden{ /*Hidden hr for mobile */
   }
   .skill-icon{ /* skill image */
     width: 90%;
+  }
+
+  .archive-gallery{
+    gap: 20px; 
+  }
+  .archive-gallery-item{
+    flex: 0 0 calc(100% - 20px);
+    margin-bottom: 0px;
   }
 
   /* ~~~~~~ Image Gallery Flex Grid ~~~~~~*/
