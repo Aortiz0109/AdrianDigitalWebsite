@@ -13,7 +13,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-	<link rel="preload" href="img/header_shelterseeker.webp" as="image" fetchpriority="high">
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -201,7 +200,7 @@
 						As Shelter Seeker lacked an existing user base, I instead crafted fictional personas to refine concepts, aligning features with the persona's expectations. To determine the personas, I focused on demographics representing Shelter Seeker's target audience—specifically, families and business owners in the North American market who value real-time weather updates for home and business safety.
 					</p>
 					<p class="para2">
-						I created two personas—an attentive mother and a business owner—to embody this target audience. These personas, with distinct profiles, formed a foundation for effectively testing my design solutions by anticipating their needs. However, before diving in, I wanted to consider the potential pain points these personas might encounter.ain points these personas might encounter.
+						I created two personas—an attentive mother and a business owner—to embody this target audience. These personas, with distinct profiles, formed a foundation for effectively testing my design solutions by anticipating their needs. However, before diving in, I wanted to consider the potential pain points these personas might encounter.
 					</p>
 				</div>
 
@@ -234,8 +233,11 @@
 				</div>
 
 				<div class="scroll-button"> <img src="img/Scroll-gif.gif" alt="Scroll Down Indicator"> </div>
-
-				<img fetchpriority="low" class="main-image" src="img/shelterseeker/shelterseeker_persona_journey.webp" alt="Personas and Journey Maps">
+				
+				<div class="persona_carousel">
+					<img fetchpriority="low" class="main-image" id="getImage" src="img/shelterseeker/mariagarcia_personajourney.webp" alt="Personas and Journey Maps">
+					<button class="swap_button" role="button" onclick="cycleImages(1)">Click to Swap Persona Image</button>
+				</div>
 				<div class="work-flow-table"> <!-- Personas and Journey Maps -->
 					<h3 class="workflow-title lefttab">
 						Personas and Journey Maps
@@ -427,7 +429,7 @@
 						The image above uses color-coded navigation arrows to emphasize page relationships: yellow denotes the main process, green signifies overlays, and purple represents additional tabs like alerts or the map legend – not imperative but designed for completeness within the main menu bar.
 					</p>
 					<p class="para2">
-						Given that the primary goal of the project centered around the mobile app, most of my focus was directed there. Nevertheless, as part of the Google UX Course requirements, we were encouraged to create mockups for the project in two additional sizes. Personally intrigued by exploring the distinctions between the mobile app and a website, I invested additional time in planning the site map and designing the Shelter Seeker website.
+						With the completion of the mobile prototype, the primary goal for Shelter Seeker was achieved. However, I still wanted to explore the creation of mockups in two additional sizes. As mentioned before, I was curious about how Shelter Seeker’s website would function differently from the mobile project and how translating the mobile theme into another facet of the project.
 					</p>
 				</div>
 
@@ -550,6 +552,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/imageToggle.js"></script>
 
 </body>
 

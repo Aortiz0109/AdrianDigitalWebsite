@@ -13,7 +13,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-	<link rel="preload" href="img/header_blossombloom.webp" as="image" fetchpriority="high">
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -233,7 +232,10 @@
 
 				<div class="scroll-button"> <img src="img/Scroll-gif.gif" alt="Scroll Down Indicator"> </div>
 
-				<img fetchpriority="low" class="main-image" src="img/blossombloom/blossom_persona_journey.webp" alt="Personas and Journey Maps">
+				<div class="persona_carousel">
+				<img fetchpriority="low" class="main-image" id="getImage" src="img/blossombloom/sarahwilson_personajourney.webp" alt="Personas and Journey Maps">
+				<button class="swap_button" role="button" onclick="cycleImages(2)">Click to Swap Persona Image</button>
+				</div>
 				<div class="work-flow-table"> <!-- Personas and Journey Maps -->
 					<h3 class="workflow-title lefttab">
 						Personas and Journey Maps
@@ -499,6 +501,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/imageToggle.js"></script>
 
 </body>
 
