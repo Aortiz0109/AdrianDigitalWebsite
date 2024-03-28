@@ -555,8 +555,7 @@ hr{
   margin-right: 20px;
 }
 .project-desc-style{
-  font-size: 1.17em;
-  font-weight: bold;
+  font-size: 1.17rem;
   margin: .83em 0;
 }
 .project-list-style{ 
@@ -620,16 +619,13 @@ hr.hidden{ /* hidden hr for mobile */
   padding: 10px 20px 20px 20px;
 }
 .workflow-title{ /* headers in workflow table */
-  font-size: 1.17em;
-  font-weight: bold;
-  margin: .83em 0;
   margin-right: 20px;
 }
 .workflow-list{ /* lists in workflow table */
-  font-size: 1.08rem;
   border-collapse: collapse;
   border-style: hidden;
   margin-left: 20px;
+  margin-right: 20px;
 }
 .workflow-list tr{
   border: none;
@@ -1104,6 +1100,7 @@ hr.hidden{ /* hidden hr for mobile */
   }
   .workflow-list{ /* lists in workflow table */
     margin-left: 0px;
+    margin-right: 0px;
   }
 
   /* ~ Paragraph styles in workflow ~ */
