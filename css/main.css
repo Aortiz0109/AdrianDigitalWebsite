@@ -989,6 +989,16 @@ hr.hidden{ /* hidden hr for mobile */
 
 /* ~~~~~~  Responsive Code ~~~~~~ */
 
+@media (max-height:600px){
+  header ul.social li{
+    display: none;
+  }
+  header .footer{
+    display: relative;
+    width: 100%;
+  }
+}
+
 @media (max-width:1099px){
   /* ~~~ General CSS ~~~ Swap Menu to Vertical Position */
   header{
